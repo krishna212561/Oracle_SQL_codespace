@@ -17,9 +17,9 @@ cells:
   - kind: 2
     value: |
       SELECT
-      first_nane || ' ' || last_name ||
+      first_name || ' ' || last_name ||
       CHR (9) || ' joined on ' || CHR(9) ||
-      to_char(hire_date,'DO-MON-YYYY') first_5_employess
+      to_char(hire_date,'DD-MON-YYYY') first_5_employess
       FROM
       employees
       ORDER BY
@@ -58,7 +58,7 @@ cells:
   - kind: 2
     value: |
       SELECT
-      CONCAT('let' 's', 'try this' )
+      CON('let' 'S', 'try this' )
       FROY
       dual;
     languageId: oracle-sql
@@ -101,7 +101,7 @@ cells:
   - kind: 2
     value: |
       SELECT
-      INITCAP( tirst_name ||' ' || last_name) full_name
+      INITCAP( First_name ||' '|| last_name) full_name
       FROM
       contacts
       ORDER BY
@@ -113,7 +113,7 @@ cells:
       'oracle LENGTH ' string,
       LENGTH( 'oracle LENGTH') Len
       FROM
-      dual :
+      dual;
     languageId: oracle-sql
   - kind: 2
     value: |
@@ -137,22 +137,32 @@ cells:
       ORDER BY Len;
     languageId: oracle-sql
   - kind: 2
-    value: |
+    value: >
       SELECT
+
       product_name,
+
       CASE
-      WHEN LENGTH( description )> 50 THEN CONCAT( SUBSTR( description, 1,50), '...)'
+
+      WHEN LENGTH( description )> 50 THEN CONCAT( SUBSTR( description, 1,50),
+      '...)')
+
       ELSE description
+
       END product_excerpt
+
       FROM
+
       products
+
       ORDER BY
+
       product_name ;
     languageId: oracle-sql
   - kind: 2
     value: |
       SELECT
-      LTRIP('XYZ')
+      LTRIM('XYZ')
       FROM
       dual;
     languageId: oracle-sql
@@ -166,7 +176,7 @@ cells:
   - kind: 2
     value: |
       SELECT
-      products_name
+      products_names
       FROM
       products
       WHERE

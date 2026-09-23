@@ -5,7 +5,7 @@ cells:
       column_list
       FROM
       T
-      GROJP BY c1,c2,c3;
+      GRoup BY c1,c2,c3;
     languageId: oracle-sql
   - kind: 2
     value: |
@@ -58,7 +58,7 @@ cells:
     value: |
       SELECT
       name,
-      COUNNT( order_id )
+      COUNT( order_id )
       FROM
       orders
       INNER JOIN customers
@@ -66,7 +66,7 @@ cells:
       GROUP BY
       name
       ORDER BY
-      nane;
+      name;
     languageId: oracle-sql
   - kind: 2
     value: |
@@ -92,7 +92,7 @@ cells:
       GROUP BY
       name
       ORDER BY
-      nane;
+      name;
     languageId: oracle-sql
   - kind: 2
     value: |
@@ -115,7 +115,7 @@ cells:
       SELECT
       column_list
       FROM
-      T
+      t
       GROUP BY
       c1
       HAVING
@@ -125,7 +125,7 @@ cells:
     value: |
       SELECT
       order_id,
-      SUM( unit_price • quantity ) order_value
+      SUM( unit_price * quantity ) order_value
       FROM
       order_items
       GROUP BY
