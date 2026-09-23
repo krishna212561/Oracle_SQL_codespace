@@ -4,7 +4,7 @@ cells:
       SELECT
       name
       FROM
-      custcmers;
+      customers;
     languageId: oracle-sql
   - kind: 2
     value: |
